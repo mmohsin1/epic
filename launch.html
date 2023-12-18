@@ -31,14 +31,23 @@
 	<h1 class="container">Authorizing Request....</h1>
 
 	<script>
+		//public
+//const metadata="https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/metadata";
+//const authorization_endpoint="https://fhir.epic.com/interconnect-fhir-oauth/oauth2/authorize";
+//const token_endpoint="https://fhir.epic.com/interconnect-fhir-oauth/oauth2/token";
+//const clientId="35a690ff-79ba-436d-a0ca-3af10e314723";
+		
+		//internal api
+const metadata="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/api/FHIR/R4/metadata";
+    const authorization_endpoint="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/oauth2/authorize";
+    const token_endpoint="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/oauth2/token";
+    const clientId="e405cbb8-1214-4c4c-9584-c0e5335c13ff";
+		
 		//get launch code and iss
     const urlParams = new URLSearchParams(window.location.search);
     const launch = urlParams.get('launch');
     const iss = urlParams.get('iss');
-    const metadata="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/api/FHIR/R4/metadata";
-    const authorization_endpoint="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/oauth2/authorize";
-    const token_endpoint="https://icinstancestg.dha.gov.ae/Interconnect-TST-FHIR/oauth2/token";
-    const clientId="e405cbb8-1214-4c4c-9584-c0e5335c13ff";
+   
     //step 1: authorize
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
